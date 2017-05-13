@@ -1,0 +1,57 @@
+<audio controls:none autoplay loop>
+  <source src="https://s3.amazonaws.com/Syntaxxx/bigger-picture.mp3" type="audio/mpeg">
+ </audio>
+
+<link rel="stylesheet" type="text/css" href="/css/guessing.css">
+
+<center><font color = ultra><font size = 6><h2><%= p2_name%> Start guessing the letters. <h2></center>
+<center><font size = 4><font color = lime green><%=blank%>
+<form method="post" action="guess">
+
+<center><h2><font color = #42f480> <%=message%><font color = red><%=message2%></h2><center>
+
+<p><center><input type="text" name="letter"</p>
+<p><center><input type="submit" value="Enter Guess"/></p>
+
+
+
+<input type="hidden" name="player1" value='<%=p1_name%>'>
+<input type="hidden" name="player2" value='<%=p2_name%>'>
+<% if counter == 6 %>
+<h2><font color = #42f4dc> Final Guess, Pick Carefully </h2>
+<% end %>
+
+
+</form>
+<% if counter == 1 %>
+	
+	<img alt="1.gif" src="http://www.retroforum.nl/galgje/1.gif" height = "100" width = "100">
+
+<% elsif counter == 2 %>
+	
+	<img alt="2.gif" src="http://www.retroforum.nl/galgje/2.gif" height = "100" width = "100">
+
+<% elsif counter == 3 %>
+	
+	<img alt="3.gif" src="http://www.retroforum.nl/galgje/3.gif" height = "100" width = "100">
+
+<% elsif counter == 4 %>
+	
+	<img alt="4.gif" src="http://www.retroforum.nl/galgje/4.gif" height = "100" wifth = "100">
+
+<% elsif counter == 5 %>
+
+	<img alt="5.gif" src="http://www.retroforum.nl/galgje/5.gif" height = "100" width = "100">
+
+<% elsif counter == 6 %>
+
+	<img alt="6.gif" src="http://www.retroforum.nl/galgje/6.gif" height = "100" width = "100">
+
+<% elsif counter == 7 %>
+
+	<img alt="7.gif" src="http://www.retroforum.nl/galgje/7.gif" height = "100" width = "100">
+
+<% end %>
+<h2><center><font size = 4><font color = #42f4eb>guesses - <%=array%></center></h2>
+<center>wrong guesses - <%=counter%>
+	
